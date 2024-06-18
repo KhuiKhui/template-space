@@ -1,9 +1,13 @@
 "use client";
+import { settingsAtom } from "@/atoms";
+import clsx from "clsx";
+import { useAtomValue } from "jotai";
 import React, { useEffect, useRef, useState } from "react";
 
-function Clock({ label }: { label?: string }) {
+function Clock() {
   const [time, setTime] = useState<Date>();
   const timeRef = useRef<any>(null);
+  const settings = useAtomValue(settingsAtom);
   useEffect(() => {
     if (timeRef.current) {
       clearInterval(timeRef.current);
@@ -15,7 +19,15 @@ function Clock({ label }: { label?: string }) {
   });
 
   return (
-    <div className="mt-[50px] flex flex-col justify-center items-center font-display">
+    <div
+      className={clsx(
+        "mt-[50px] flex flex-col justify-center items-center font-display",
+        {
+          block: settings.toggleTime,
+          hidden: !settings.toggleTime,
+        }
+      )}
+    >
       {time ? (
         <div className="flex flex-col items-center justify-center">
           <div className="text-[150px]">

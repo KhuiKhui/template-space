@@ -24,22 +24,22 @@ function Settings() {
         >
           {settings.toggleTime ? "On" : "Off"}
         </button>
-        <span className="justify-self-end">Hide header & footer: </span>
+        <span className="justify-self-end">Show footer: </span>
         <button
           onClick={() =>
-            setSettings({ ...settings, toggleBars: !settings.toggleBars })
+            setSettings({ ...settings, toggleFooter: !settings.toggleFooter })
           }
           className="border-[black] border-dashed border-2 w-[50px] h-fit hover:bg-[#F5F5F5] justify-self-center"
         >
-          {settings.toggleBars ? "On" : "Off"}
+          {settings.toggleFooter ? "On" : "Off"}
         </button>
       </div>
       <br></br>
       <div>
         <div>
           Template Space is a monotone environment, designed for staring at your
-          screen and thinking when you don't know what tab to open. This website
-          is heavily inspired by OMORI, you can check them out{" "}
+          screen and thinking when you don{"'"}t know what tab to open. This
+          website is heavily inspired by OMORI, you can check them out{" "}
           <a
             className="underline"
             href="https://www.omori-game.com/en"

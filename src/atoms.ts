@@ -3,7 +3,7 @@ import { atomWithStorage } from "jotai/utils";
 
 export const settingsAtom = atomWithStorage("time", {
   toggleTime: true,
-  toggleBars: true,
+  toggleFooter: true,
 });
 
 export const settingsClickedAtom = atom(false);
