@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-function Clock() {
+function Clock({ label }: { label?: string }) {
   const [time, setTime] = useState<Date>();
   const timeRef = useRef<any>(null);
   useEffect(() => {
@@ -15,7 +15,7 @@ function Clock() {
   });
 
   return (
-    <div className="mt-[50px]">
+    <div className="mt-[50px] flex flex-col justify-center items-center font-display">
       {time ? (
         <div className="flex flex-col items-center justify-center">
           <div className="text-[150px]">
@@ -30,7 +30,10 @@ function Clock() {
           </div>
         </div>
       ) : (
-        <div />
+        <div className="flex flex-col items-center justify-center">
+          <div className="text-[150px]">--:--</div>
+          <div className="text-[25px]">---, --- -- ----</div>
+        </div>
       )}
     </div>
   );

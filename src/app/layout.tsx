@@ -35,7 +35,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <div className="gap-2 grid grid-rows-layout grid-cols-1 justify-center min-w-screen min-h-screen font-display">
+        <div className="gap-2 grid grid-rows-layout grid-cols-1 justify-center min-w-screen min-h-screen font-display cursor-default">
           <Header></Header>
           {children}
           <Footer></Footer>
