@@ -7,3 +7,4 @@ export const settingsAtom = atomWithStorage("time", {
 });
 
 export const settingsClickedAtom = atom(false);
+export const darkAtom = atomWithStorage("darkMode", false);

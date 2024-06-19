@@ -25,19 +25,19 @@ function Footer() {
         <Link href="https://www.facebook.com/khoi.khuatdang">
           <FontAwesomeIcon
             icon={faFacebook}
-            className="w-[20px] h-[20px] mr-[10px] mt-[5px]"
+            className="w-[20px] h-[20px] mr-3 mt-[5px]"
           ></FontAwesomeIcon>
         </Link>
         <Link href="https://www.linkedin.com/in/dang-khoi-khuat-4b5847281/">
           <FontAwesomeIcon
             icon={faLinkedin}
-            className="w-[20px] h-[20px] mr-[10px] mt-[5px]"
+            className="w-[20px] h-[20px] mr-3 mt-[5px]"
           ></FontAwesomeIcon>
         </Link>
         <Link href="https://github.com/KhuiKhui">
           <FontAwesomeIcon
             icon={faGithub}
-            className="w-[20px] h-[20px] mr-[10px] mt-[5px]"
+            className="w-[20px] h-[20px] mr-3 mt-[5px]"
           ></FontAwesomeIcon>
         </Link>
       </div>
