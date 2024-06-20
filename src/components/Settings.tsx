@@ -35,6 +35,15 @@ function Settings() {
           >
             {settings.toggleFooter ? "On" : "Off"}
           </button>
+          <span className="justify-self-end">Show NPCs: </span>
+          <button
+            onClick={() =>
+              setSettings({ ...settings, toggleNPC: !settings.toggleNPC })
+            }
+            className="border-black dark:border-white border-dashed border-2 w-[50px] h-fit hover:bg-[#F5F5F5] dark:hover:bg-[#141414] justify-self-center"
+          >
+            {settings.toggleNPC ? "On" : "Off"}
+          </button>
         </div>
         <br></br>
 

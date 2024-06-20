@@ -27,7 +27,7 @@
 // }
 
 "use client";
-import { darkAtom, settingsClickedAtom } from "@/atoms";
+import { darkAtom, settingsAtom, settingsClickedAtom } from "@/atoms";
 import Background from "@/components/Background";
 import Clock from "@/components/Clock";
 import Footer from "@/components/Footer";
@@ -38,6 +38,7 @@ import { useAtomValue } from "jotai";
 
 export default function Home() {
   const settingsClicked = useAtomValue(settingsClickedAtom);
+  const settings = useAtomValue(settingsAtom);
   const toggleDark = useAtomValue(darkAtom);
   return (
     <>
@@ -51,9 +52,9 @@ export default function Home() {
       >
         <Header></Header>
         <div className="flex flex-col items-center">
+          {settings.toggleNPC ? <Background /> : <div />}
           {settingsClicked ? <Settings /> : <div />}
           <Clock />
-          <Background />
         </div>
 
         <Footer></Footer>
