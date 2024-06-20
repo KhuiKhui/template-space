@@ -21,7 +21,7 @@ function Clock() {
   return (
     <div
       className={clsx(
-        "-z-20 mt-[50px] flex flex-col justify-center items-center font-display",
+        "flex flex-col justify-center items-center z-[1] opacity-[0.99] mt-[50px] font-display",
         {
           block: settings.toggleTime,
           hidden: !settings.toggleTime,

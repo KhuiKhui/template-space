@@ -7,7 +7,7 @@ function Header() {
   const [settingsClicked, setSettingsClicked] = useAtom(settingsClickedAtom);
   const [toggleDark, setToggleDark] = useAtom(darkAtom);
   return (
-    <div className="flex justify-between p-[5px]">
+    <div className="z-50 flex justify-between p-[5px]">
       <span>[ Template _ ]</span>
       <div>
         <button className="h-fit" onClick={() => setToggleDark(!toggleDark)}>

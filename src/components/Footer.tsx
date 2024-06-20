@@ -13,7 +13,7 @@ function Footer() {
   const settings = useAtomValue(settingsAtom);
   return (
     <div
-      className={clsx("flex flex-row self-end justify-between", {
+      className={clsx("z-50 flex flex-row self-end justify-between", {
         block: settings.toggleFooter,
         hidden: !settings.toggleFooter,
       })}
