@@ -1,8 +1,7 @@
 "use client";
-import { darkAtom, settingsAtom, settingsClickedAtom } from "@/atoms";
+import { settingsAtom } from "@/atoms";
 
-import clsx from "clsx";
-import { useAtom, useAtomValue } from "jotai";
+import { useAtom } from "jotai";
 import React from "react";
 
 function Settings() {

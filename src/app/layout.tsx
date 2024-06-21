@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import "@fortawesome/fontawesome-svg-core";
 import { config } from "@fortawesome/fontawesome-svg-core";
 
@@ -33,7 +34,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
